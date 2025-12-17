@@ -42,4 +42,3 @@ if (require.main === module) {
 
 // Exporta o app para ser usado nos testes de integração
 module.exports = app;
-});
