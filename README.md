@@ -14,6 +14,8 @@ A API permite gerenciar diferentes tipos de iniciativas sustentáveis, como:
 
 - **Node.js** - Ambiente de execução JavaScript
 - **Express** - Framework web para Node.js
+- **Jest** - Framework de testes
+- **Supertest** - Biblioteca para testes de API HTTP
 - Dados armazenados em memória (sem banco de dados)
 
 ## 📦 Instalação
@@ -100,9 +102,14 @@ workshop-teste-documentacao-dio/
 │   ├── app.js                    # Arquivo principal da aplicação
 │   ├── routes/
 │   │   └── initiatives.js        # Rotas da API
-│   └── services/
-│       └── initiativesService.js # Lógica de negócio
+│   ├── services/
+│   │   └── initiativesService.js # Lógica de negócio
+│   └── __tests__/                # Testes automatizados
+│       ├── initiativesService.test.js  # Testes unitários
+│       └── api.test.js           # Testes de integração
 ├── package.json                  # Dependências do projeto
+├── CONTRIBUTING.md               # Guia de contribuição
+├── CODE_OF_CONDUCT.md            # Código de conduta
 └── README.md                     # Documentação
 ```
 
