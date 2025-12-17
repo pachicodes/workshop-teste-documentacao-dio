@@ -29,8 +29,17 @@ app.get('/', (req, res) => {
 // Todas as rotas definidas em initiativesRoutes serão acessíveis a partir desse caminho
 app.use('/api/initiatives', initiativesRoutes);
 
-// Inicia o servidor na porta definida
-// O callback é executado quando o servidor está pronto para receber requisições
-app.listen(PORT, () => {
-  console.log(`API running on http://localhost:${PORT}`);
+// ===========================================
+// INICIALIZAÇÃO DO SERVIDOR
+// ===========================================
+// Só inicia o servidor se este arquivo for executado diretamente (npm start)
+// Se for importado para testes, não inicia o servidor
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`API running on http://localhost:${PORT}`);
+  });
+}
+
+// Exporta o app para ser usado nos testes de integração
+module.exports = app;
 });
