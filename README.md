@@ -180,10 +180,56 @@ Este projeto demonstra conceitos fundamentais de desenvolvimento de APIs:
 - Operações CRUD (Create, Read, Update, Delete)
 - Organização de código em camadas (routes e services)
 - Manipulação de dados em memória
+- Testes unitários e de integração com Jest
+
+## 🧪 Testes
+
+O projeto inclui testes automatizados para garantir a qualidade do código.
+
+### Executar todos os testes
+
+```bash
+npm test
+```
+
+### Executar testes em modo watch
+
+Útil durante o desenvolvimento - os testes rodam automaticamente quando você salva um arquivo:
+
+```bash
+npm run test:watch
+```
+
+### Ver cobertura de código
+
+Mostra quais partes do código estão cobertas por testes:
+
+```bash
+npm run test:coverage
+```
+
+### Estrutura dos Testes
+
+| Arquivo | Tipo | O que testa |
+|---------|------|-------------|
+| `initiativesService.test.js` | Unitário | Funções do serviço (getAll, getById, create, update, remove) |
+| `api.test.js` | Integração | Endpoints HTTP (GET, POST, PUT, DELETE) |
+
+### Exemplo de saída dos testes
+
+```
+ PASS  src/__tests__/initiativesService.test.js
+ PASS  src/__tests__/api.test.js
+
+Test Suites: 2 passed, 2 total
+Tests:       25 passed, 25 total
+```
 
 ## 🤝 Contribuindo
 
-Este é um projeto educacional. Sinta-se à vontade para experimentar, modificar e aprender!
+Quer contribuir com o projeto? Leia nosso [Guia de Contribuição](CONTRIBUTING.md) para saber como começar!
+
+Ao participar deste projeto, você concorda em seguir nosso [Código de Conduta](CODE_OF_CONDUCT.md).
 
 ## 📄 Licença
 
